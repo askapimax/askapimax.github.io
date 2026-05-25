@@ -34,5 +34,5 @@ collections:
       - { label: Author, name: author, widget: string, default: Max }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Hero Image, name: hero, widget: image, required: false }
-      - { label: Tags, name: tags, widget: list, default: ["Notiz"] }
+      - { label: Tags, name: tags, widget: list, default: ["Note"] }
       - { label: Body, name: body, widget: markdown }

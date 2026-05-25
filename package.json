@@ -7,7 +7,10 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "cms": "npx decap-server"
+    "cms": "npx decap-server",
+    "worker:deploy": "wrangler deploy --config cloudflare/decap-oauth-worker/wrangler.toml",
+    "worker:secret:client-id": "wrangler secret put GITHUB_CLIENT_ID --config cloudflare/decap-oauth-worker/wrangler.toml",
+    "worker:secret:client-secret": "wrangler secret put GITHUB_CLIENT_SECRET --config cloudflare/decap-oauth-worker/wrangler.toml"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.50.0"
   }
 }

@@ -4,8 +4,18 @@ Small Cloudflare Worker that provides the OAuth endpoints Decap needs when the s
 
 ## Setup
 
-1. Copy `wrangler.toml.example` to `wrangler.toml`.
-2. Set the Worker name and route/domain.
+1. Log in to Cloudflare:
+
+```bash
+npx wrangler login
+```
+
+2. Deploy once to get the Worker URL:
+
+```bash
+npm run worker:deploy
+```
+
 3. Create a GitHub OAuth App.
 4. Use this callback URL:
 
@@ -16,14 +26,14 @@ https://your-cloudflare-worker-domain/callback
 5. Set secrets:
 
 ```bash
-wrangler secret put GITHUB_CLIENT_ID
-wrangler secret put GITHUB_CLIENT_SECRET
+npm run worker:secret:client-id
+npm run worker:secret:client-secret
 ```
 
 6. Deploy:
 
 ```bash
-wrangler deploy
+npm run worker:deploy
 ```
 
 Then set `backend.base_url` in `public/admin/config.yml` to the Worker URL.
