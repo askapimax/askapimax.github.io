@@ -10,7 +10,6 @@ const navItems = [
 <header class="site-header">
   <nav class="container nav" aria-label="Main navigation">
     <a class="brand" href="/" aria-label="Max Digital Garden Home">
-      <span class="brand-mark" aria-hidden="true">MG</span>
       <span>Max Digital Garden</span>
     </a>
     <div class="nav-links">
@@ -40,22 +39,8 @@ const navItems = [
   .brand {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
     font-weight: 840;
     text-decoration: none;
-  }
-
-  .brand-mark {
-    display: inline-grid;
-    width: 34px;
-    height: 34px;
-    place-items: center;
-    border: 1px solid var(--ink);
-    border-radius: 50%;
-    background: var(--accent-warm);
-    color: var(--ink);
-    font-size: 0.72rem;
-    font-weight: 900;
   }
 
   .nav-links {
