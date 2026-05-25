@@ -16,7 +16,7 @@ export async function getAllTags() {
 }
 
 export function formatDate(date: Date) {
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat("en-US", {
     day: "2-digit",
     month: "long",
     year: "numeric"

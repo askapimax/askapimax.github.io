@@ -12,15 +12,15 @@ const tags = await getAllTags();
 <BaseLayout>
   <section class="hero container">
     <div class="hero-copy">
-      <p class="eyebrow">Persönlicher Blog</p>
+      <p class="eyebrow">Personal Blog</p>
       <h1>Max Digital Garden</h1>
       <p class="lede">
-        Ein wachsender Ort für Gedanken, Projekte und Beobachtungen zwischen Technik,
-        Alltag und den kleinen Dingen, die hängen bleiben.
+        A growing place for thoughts, projects, and observations between technology,
+        everyday life, and the small things that stay with me.
       </p>
       <div class="hero-actions">
-        <a class="button" href="/blog/">Alle Posts</a>
-        <a class="button secondary" href="/rss.xml">RSS abonnieren</a>
+        <a class="button" href="/blog/">All Posts</a>
+        <a class="button secondary" href="/rss.xml">Subscribe via RSS</a>
       </div>
     </div>
     <img src="/images/digital-garden.svg" alt="" class="hero-art" loading="eager" />
@@ -28,16 +28,16 @@ const tags = await getAllTags();
 
   <section class="container section featured-section" aria-labelledby="featured-title">
     <div class="section-heading">
-      <p class="eyebrow">Aktuell</p>
-      <h2 id="featured-title">Frisch notiert</h2>
+      <p class="eyebrow">Latest</p>
+      <h2 id="featured-title">Fresh Notes</h2>
     </div>
     {featured && <PostCard post={featured} featured />}
   </section>
 
   <section class="container section latest-grid" aria-labelledby="latest-title">
     <div class="section-heading">
-      <p class="eyebrow">Archiv</p>
-      <h2 id="latest-title">Weitere Einträge</h2>
+      <p class="eyebrow">Archive</p>
+      <h2 id="latest-title">More Entries</h2>
     </div>
     <div class="grid">
       {latest.map((post) => <PostCard post={post} />)}
@@ -46,8 +46,8 @@ const tags = await getAllTags();
 
   <section class="container section tag-band" aria-labelledby="tag-title">
     <div>
-      <p class="eyebrow">Themen</p>
-      <h2 id="tag-title">Woran ich gerade entlangdenke</h2>
+      <p class="eyebrow">Topics</p>
+      <h2 id="tag-title">What I am thinking through</h2>
     </div>
     <TagList tags={tags} />
   </section>

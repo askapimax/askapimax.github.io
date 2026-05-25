@@ -6,7 +6,7 @@ export async function GET(context) {
 
   return rss({
     title: "Max Digital Garden",
-    description: "Ein persönlicher Blog über Ideen, Projekte und digitale Spuren.",
+    description: "A personal blog about ideas, projects, and digital trails.",
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

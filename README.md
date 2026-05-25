@@ -19,9 +19,8 @@ npm run cms
 
 ## Configure before publishing
 
-Replace these placeholders:
+Replace this placeholder:
 
-- `your-github-user` in `astro.config.mjs` and `public/admin/config.yml`
 - `your-cloudflare-worker-domain` in `public/admin/config.yml`
 - Cloudflare Worker values in `cloudflare/decap-oauth-worker/wrangler.toml.example`
 

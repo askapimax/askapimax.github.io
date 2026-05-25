@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-github-user/your-github-user.github.io
+  repo: askapimax/askapimax.github.io
   branch: main
   base_url: https://your-cloudflare-worker-domain
   auth_endpoint: auth
@@ -10,8 +10,8 @@ local_backend: true
 media_folder: public/uploads
 public_folder: /uploads
 
-site_url: https://your-github-user.github.io
-display_url: https://your-github-user.github.io
+site_url: https://askapimax.github.io
+display_url: https://askapimax.github.io
 logo_url: /images/digital-garden.svg
 
 publish_mode: simple

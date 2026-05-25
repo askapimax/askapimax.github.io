@@ -8,11 +8,11 @@ const posts = await getPublishedPosts();
 const tags = await getAllTags();
 ---
 
-<BaseLayout title="Blog" description="Alle veröffentlichten Einträge aus Max Digital Garden.">
+<BaseLayout title="Blog" description="All published entries from Max Digital Garden.">
   <header class="archive-hero container">
     <p class="eyebrow">Blog</p>
-    <h1>Alle Einträge</h1>
-    <p class="lede">Notizen, Essays und Projektfragmente, chronologisch gesammelt.</p>
+    <h1>All Entries</h1>
+    <p class="lede">Notes, essays, and project fragments collected chronologically.</p>
     <TagList tags={tags} />
   </header>
 
