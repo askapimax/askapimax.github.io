@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Max Digital Garden</p>
+    <div>
+      <a href="/rss.xml">RSS</a>
+      <a href="/admin/">CMS</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    padding-block: 34px;
+    color: var(--muted);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.95rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    margin-left: 18px;
+    font-weight: 720;
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .footer-inner {
+      flex-direction: column;
+    }
+
+    a {
+      margin: 0 18px 0 0;
+    }
+  }
+</style>

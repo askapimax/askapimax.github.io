@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About" description="Über Max Digital Garden und die Idee hinter diesem Blog.">
+  <section class="container about-hero">
+    <p class="eyebrow">About</p>
+    <h1>Ein Ort für Gedanken mit Wurzeln und Versionierung.</h1>
+  </section>
+  <section class="prose about-copy">
+    <p>
+      Max Digital Garden ist als persönlicher Blog gedacht: ein Ort für Essays,
+      Projektnotizen, technische Experimente und alles, was nicht in einen schnellen
+      Social-Media-Post passt.
+    </p>
+    <p>
+      Die Inhalte liegen bewusst als Markdown im GitHub-Repository. Dadurch bleibt
+      alles versioniert, portabel und einfach genug, um auch in ein paar Jahren noch
+      verstanden zu werden.
+    </p>
+    <p>
+      Decap CMS gibt dem Ganzen eine bequeme Oberfläche, damit neue Einträge auch
+      unterwegs entstehen können, ohne direkt im Code-Editor zu landen.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    padding: 80px 0 34px;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 8vw, 6rem);
+    font-weight: 520;
+    line-height: 1;
+  }
+
+  .about-copy {
+    padding-bottom: 84px;
+  }
+</style>

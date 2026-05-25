@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import TagList from "../components/TagList.astro";
+import { getAllTags, getPublishedPosts } from "../lib/posts";
+
+const posts = await getPublishedPosts();
+const [featured, ...latest] = posts;
+const tags = await getAllTags();
+---
+
+<BaseLayout>
+  <section class="hero container">
+    <div class="hero-copy">
+      <p class="eyebrow">Persönlicher Blog</p>
+      <h1>Max Digital Garden</h1>
+      <p class="lede">
+        Ein wachsender Ort für Gedanken, Projekte und Beobachtungen zwischen Technik,
+        Alltag und den kleinen Dingen, die hängen bleiben.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="/blog/">Alle Posts</a>
+        <a class="button secondary" href="/rss.xml">RSS abonnieren</a>
+      </div>
+    </div>
+    <img src="/images/digital-garden.svg" alt="" class="hero-art" loading="eager" />
+  </section>
+
+  <section class="container section featured-section" aria-labelledby="featured-title">
+    <div class="section-heading">
+      <p class="eyebrow">Aktuell</p>
+      <h2 id="featured-title">Frisch notiert</h2>
+    </div>
+    {featured && <PostCard post={featured} featured />}
+  </section>
+
+  <section class="container section latest-grid" aria-labelledby="latest-title">
+    <div class="section-heading">
+      <p class="eyebrow">Archiv</p>
+      <h2 id="latest-title">Weitere Einträge</h2>
+    </div>
+    <div class="grid">
+      {latest.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+
+  <section class="container section tag-band" aria-labelledby="tag-title">
+    <div>
+      <p class="eyebrow">Themen</p>
+      <h2 id="tag-title">Woran ich gerade entlangdenke</h2>
+    </div>
+    <TagList tags={tags} />
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: grid;
+    min-height: calc(100vh - 68px);
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    align-items: center;
+    gap: clamp(28px, 6vw, 72px);
+    padding-block: 72px 44px;
+  }
+
+  h1,
+  h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 520;
+    line-height: 0.98;
+  }
+
+  h1 {
+    max-width: 760px;
+    font-size: clamp(3.5rem, 11vw, 8.4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .hero-copy {
+    max-width: 780px;
+  }
+
+  .hero .lede {
+    max-width: 660px;
+    margin: 26px 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-art {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 26px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .tag-band {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 30px;
+    align-items: center;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 860px) {
+    .hero,
+    .tag-band {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      min-height: auto;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

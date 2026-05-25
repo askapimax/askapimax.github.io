@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract digital garden illustration</title>
+  <desc id="desc">A calm editorial illustration with paths, notes, and growing plants.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#efe5d8"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop offset="0" stop-color="#0d6b57"/>
+      <stop offset="1" stop-color="#8fb64b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="860" fill="url(#paper)"/>
+  <path d="M72 682c165-119 308-172 452-158 127 12 218 80 347 58 105-18 178-80 257-154" fill="none" stroke="#d49a4a" stroke-width="18" stroke-linecap="round" opacity=".68"/>
+  <path d="M120 760c172-119 329-169 471-144 123 21 206 91 333 66 77-15 132-59 186-114" fill="none" stroke="#7d2f47" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <g fill="none" stroke="#20201f" stroke-width="3" opacity=".16">
+    <path d="M120 130h960M120 230h960M120 330h960M120 430h960M120 530h960M120 630h960"/>
+    <path d="M220 80v700M420 80v700M620 80v700M820 80v700M1020 80v700"/>
+  </g>
+  <g transform="translate(190 140)">
+    <rect width="250" height="154" rx="16" fill="#fffaf1" stroke="#20201f" stroke-width="4"/>
+    <path d="M38 48h170M38 82h134M38 116h186" stroke="#0d6b57" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(726 104)">
+    <rect width="286" height="184" rx="18" fill="#fffaf1" stroke="#20201f" stroke-width="4"/>
+    <circle cx="70" cy="76" r="26" fill="#d49a4a"/>
+    <path d="M118 68h118M118 104h82M52 138h184" stroke="#7d2f47" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(482 398)">
+    <rect width="258" height="176" rx="18" fill="#fffdf8" stroke="#20201f" stroke-width="4"/>
+    <path d="M56 128c29-80 67-109 105-89 31 17 27 64-6 89" fill="none" stroke="url(#green)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M150 128c28-53 64-73 108-60" fill="none" stroke="#0d6b57" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="82" cy="78" r="12" fill="#8fb64b"/>
+    <circle cx="190" cy="62" r="10" fill="#d49a4a"/>
+  </g>
+  <g fill="#0d6b57">
+    <circle cx="176" cy="438" r="12"/>
+    <circle cx="1010" cy="385" r="14"/>
+    <circle cx="352" cy="658" r="10"/>
+    <circle cx="880" cy="724" r="12"/>
+  </g>
+  <g fill="#20201f" opacity=".78">
+    <circle cx="610" cy="280" r="6"/>
+    <circle cx="644" cy="280" r="6"/>
+    <circle cx="678" cy="280" r="6"/>
+  </g>
+</svg>

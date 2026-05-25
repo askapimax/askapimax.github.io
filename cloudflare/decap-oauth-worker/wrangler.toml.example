@@ -1,0 +1,6 @@
+name = "max-digital-garden-decap-oauth"
+main = "src/index.js"
+compatibility_date = "2026-05-25"
+
+[vars]
+ALLOWED_ORIGIN = "https://your-github-user.github.io"

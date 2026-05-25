@@ -1,0 +1,84 @@
+---
+import TagList from "./TagList.astro";
+import { formatDate } from "../lib/posts";
+
+const { post, featured = false } = Astro.props;
+---
+
+<article class:list={["post-card", { featured }]}>
+  {
+    post.data.hero && (
+      <a class="image-link" href={`/blog/${post.id}/`} aria-label={post.data.title}>
+        <img src={post.data.hero} alt="" loading="lazy" />
+      </a>
+    )
+  }
+  <div class="card-body">
+    <p class="meta">{formatDate(post.data.pubDate)} · {post.data.author}</p>
+    <h2><a href={`/blog/${post.id}/`}>{post.data.title}</a></h2>
+    <p>{post.data.description}</p>
+    <TagList tags={post.data.tags} compact />
+  </div>
+</article>
+
+<style>
+  .post-card {
+    display: grid;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 253, 248, 0.78);
+    box-shadow: 0 14px 42px rgba(40, 31, 19, 0.08);
+  }
+
+  .post-card.featured {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .image-link {
+    display: block;
+    min-height: 220px;
+    background: var(--surface-soft);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: clamp(20px, 4vw, 34px);
+  }
+
+  .meta {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    font-weight: 540;
+    line-height: 1.08;
+  }
+
+  h2 a {
+    text-decoration: none;
+  }
+
+  .card-body > p:not(.meta) {
+    margin: 14px 0 18px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 760px) {
+    .post-card.featured {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

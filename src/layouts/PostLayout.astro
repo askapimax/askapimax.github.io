@@ -1,0 +1,62 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import TagList from "../components/TagList.astro";
+import { formatDate } from "../lib/posts";
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.hero}>
+  <article class="post-shell">
+    <header class="post-hero container">
+      <p class="eyebrow">{formatDate(post.data.pubDate)} · {post.data.author}</p>
+      <h1>{post.data.title}</h1>
+      <p class="lede">{post.data.description}</p>
+      <TagList tags={post.data.tags} />
+      {
+        post.data.hero && (
+          <img class="post-image" src={post.data.hero} alt="" loading="eager" />
+        )
+      }
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-shell {
+    padding-bottom: 80px;
+  }
+
+  .post-hero {
+    padding: 74px 0 38px;
+  }
+
+  h1 {
+    max-width: 840px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 8vw, 5.6rem);
+    font-weight: 520;
+    line-height: 0.98;
+  }
+
+  .lede {
+    max-width: 700px;
+    margin: 24px 0 22px;
+  }
+
+  .post-image {
+    width: 100%;
+    max-height: 440px;
+    margin-top: 34px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+  }
+</style>

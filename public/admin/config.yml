@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: your-github-user/your-github-user.github.io
+  branch: main
+  base_url: https://your-cloudflare-worker-domain
+  auth_endpoint: auth
+
+local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+site_url: https://your-github-user.github.io
+display_url: https://your-github-user.github.io
+logo_url: /images/digital-garden.svg
+
+publish_mode: simple
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Post
+    folder: src/content/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    preview_path: "blog/{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Published, name: pubDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Updated, name: updatedDate, widget: datetime, required: false, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Author, name: author, widget: string, default: Max }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Hero Image, name: hero, widget: image, required: false }
+      - { label: Tags, name: tags, widget: list, default: ["Notiz"] }
+      - { label: Body, name: body, widget: markdown }

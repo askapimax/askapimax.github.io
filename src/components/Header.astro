@@ -1,0 +1,89 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/about/", label: "About" },
+  { href: "/admin/", label: "CMS" }
+];
+---
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Hauptnavigation">
+    <a class="brand" href="/" aria-label="Max Digital Garden Home">
+      <span class="brand-mark" aria-hidden="true">MG</span>
+      <span>Max Digital Garden</span>
+    </a>
+    <div class="nav-links">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(221, 210, 195, 0.7);
+    background: rgba(247, 244, 239, 0.84);
+    backdrop-filter: blur(18px);
+  }
+
+  .nav {
+    display: flex;
+    min-height: 68px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 840;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    display: inline-grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    background: var(--accent-warm);
+    color: var(--ink);
+    font-size: 0.72rem;
+    font-weight: 900;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 28px);
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 690;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 680px) {
+    .nav {
+      min-height: auto;
+      padding-block: 13px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .nav-links {
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
