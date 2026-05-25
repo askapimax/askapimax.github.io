@@ -66,14 +66,15 @@ async function handleCallback(url, env) {
     return htmlResponse(errorHtml(message), 502, env);
   }
 
-  return htmlResponse(successHtml(tokenPayload), 200, env);
+  return htmlResponse(successHtml(tokenPayload, env), 200, env);
 }
 
-function successHtml(payload) {
+function successHtml(payload, env) {
   const responsePayload = JSON.stringify({
     token: payload.access_token,
     provider: "github"
   });
+  const targetOrigin = env.ALLOWED_ORIGIN || "*";
 
   return `<!doctype html>
 <html lang="en">
@@ -84,10 +85,12 @@ function successHtml(payload) {
   <body>
     <script>
       const payload = ${JSON.stringify(responsePayload)};
+      const targetOrigin = ${JSON.stringify(targetOrigin)};
       if (window.opener) {
-        window.opener.postMessage("authorization:github:success:" + payload, "*");
+        window.opener.postMessage("authorizing:github", targetOrigin);
+        window.opener.postMessage("authorization:github:success:" + payload, targetOrigin);
       }
-      window.close();
+      window.setTimeout(() => window.close(), 500);
     </script>
     <p>Authentication complete. You can close this window.</p>
   </body>
