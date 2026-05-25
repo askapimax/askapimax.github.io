@@ -20,7 +20,7 @@ npm run worker:deploy
 4. Use this callback URL:
 
 ```text
-https://your-cloudflare-worker-domain/callback
+https://max-digital-garden-decap-oauth.askapimax.workers.dev/callback
 ```
 
 5. Set secrets:

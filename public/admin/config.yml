@@ -2,7 +2,7 @@ backend:
   name: github
   repo: askapimax/askapimax.github.io
   branch: main
-  base_url: https://your-cloudflare-worker-domain
+  base_url: https://max-digital-garden-decap-oauth.askapimax.workers.dev
   auth_endpoint: auth
 
 local_backend: true

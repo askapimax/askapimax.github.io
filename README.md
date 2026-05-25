@@ -19,22 +19,23 @@ npm run cms
 
 ## Configure before publishing
 
-Replace this placeholder:
+The Decap OAuth Worker is configured at:
 
-- `your-cloudflare-worker-domain` in `public/admin/config.yml`
-- Cloudflare Worker values in `cloudflare/decap-oauth-worker/wrangler.toml.example`
+```text
+https://max-digital-garden-decap-oauth.askapimax.workers.dev
+```
 
 Create a GitHub OAuth app with callback:
 
 ```text
-https://your-cloudflare-worker-domain/callback
+https://max-digital-garden-decap-oauth.askapimax.workers.dev/callback
 ```
 
 Set Worker secrets:
 
 ```bash
-wrangler secret put GITHUB_CLIENT_ID
-wrangler secret put GITHUB_CLIENT_SECRET
+npm run worker:secret:client-id
+npm run worker:secret:client-secret
 ```
 
 In GitHub repository settings, set Pages source to GitHub Actions.
