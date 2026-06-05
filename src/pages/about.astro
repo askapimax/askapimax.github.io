@@ -2,43 +2,292 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About" description="About Max Digital Garden and the idea behind this blog.">
-  <section class="container about-hero">
-    <p class="eyebrow">About</p>
-    <h1>A place for thoughts with roots and version history.</h1>
+<BaseLayout
+  title="About Max"
+  description="About Max, a media computer scientist, API product person, former founder, and Postman team member."
+  image="/images/max-about-focus.png"
+>
+  <section class="about-hero container">
+    <div class="hero-copy">
+      <p class="eyebrow">About Max</p>
+      <h1>I build API products where people, data, and systems meet.</h1>
+      <p class="lede">
+        I have a master&apos;s degree in Media Informatics, a long-running love for
+        digital products, and a very particular soft spot for APIs. This garden
+        is where I collect ideas about technology, product thinking, and the
+        systems that quietly make good experiences possible.
+      </p>
+    </div>
+    <figure class="portrait">
+      <img
+        src="/images/max-about-focus.png"
+        alt="Portrait of Max"
+        loading="eager"
+      />
+    </figure>
   </section>
-  <section class="prose about-copy">
-    <p>
-      Max Digital Garden is meant to be a personal blog: a home for essays,
-      project notes, technical experiments, and everything that does not fit
-      into a quick social media post.
-    </p>
-    <p>
-      The content deliberately lives as Markdown in the GitHub repository. That keeps
-      everything versioned, portable, and simple enough to understand years from now.
-    </p>
-    <p>
-      Decap CMS adds a comfortable writing interface, so new entries can also happen
-      on the go without opening a code editor.
-    </p>
+
+  <section class="story-band">
+    <div class="container story-grid">
+      <div class="story-intro">
+        <p class="eyebrow">The Short Version</p>
+        <h2>From media informatics to API ecosystems.</h2>
+      </div>
+      <div class="story-copy">
+        <p>
+          My path into the digital world started with media informatics. I studied
+          in Regensburg and Duesseldorf, earned my bachelor&apos;s and master&apos;s
+          degrees, and kept being drawn to the same question: how do we shape
+          technology so it becomes useful, understandable, and reliable for real
+          people?
+        </p>
+        <p>
+          During my studies, I co-founded icho systems, where we worked on
+          products designed to support people living with dementia. That early
+          experience still matters to me. It taught me that technology should not
+          be impressive for its own sake. It should help, connect, and reduce
+          friction where life is already complicated enough.
+        </p>
+        <p>
+          Over the years, APIs became my favorite place to work. I spent several
+          years as a Product Owner for APIs, first at
+          <a href="http://developer.db.com/">Deutsche Bank</a> and later at
+          <a href="https://developer.condor.com/">Condor Airlines</a>. At Condor,
+          I helped build a full API platform with an outstanding team, covering
+          the data and capabilities behind booking, operations, authentication,
+          and many of the moving parts that keep an airline running.
+        </p>
+        <p>
+          I am also a certified Product Owner and certified in Agile Leadership,
+          which fits the way I like to work: clear ownership, collaborative
+          teams, and enough structure to move complex products forward without
+          losing curiosity.
+        </p>
+        <p>
+          Since 2026, I have been working at
+          <a href="https://www.postman.com/">Postman</a>, one of the world&apos;s
+          leading API tooling companies. It feels like a natural next chapter:
+          closer to the craft, the community, and the future of how APIs are
+          built, described, shared, and used.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container focus-section" aria-labelledby="focus-title">
+    <div class="section-heading">
+      <p class="eyebrow">What Drives Me</p>
+      <h2 id="focus-title">APIs are more than interfaces.</h2>
+    </div>
+    <div class="focus-grid">
+      <article>
+        <span>01</span>
+        <h3>Product clarity</h3>
+        <p>
+          I like turning messy needs into usable capabilities, clear contracts,
+          and systems that teams can actually build on.
+        </p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Shared understanding</h3>
+        <p>
+          The best API work happens when product, engineering, operations, and
+          business teams can speak about the same thing without translating
+          everything twice.
+        </p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Useful technology</h3>
+        <p>
+          From assistive products to airline systems, I care about tools that make
+          complex situations easier to handle.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container closing-section">
+    <p class="eyebrow">This Garden</p>
+    <blockquote>
+      I use this space to think in public, collect notes, and follow the threads
+      between product work, APIs, digital systems, and the ideas that keep
+      growing after a project is shipped.
+    </blockquote>
   </section>
 </BaseLayout>
 
 <style>
   .about-hero {
-    padding: 80px 0 34px;
+    display: grid;
+    min-height: calc(100vh - 68px);
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+    align-items: center;
+    gap: clamp(28px, 5vw, 60px);
+    padding-block: 68px 52px;
   }
 
-  h1 {
-    max-width: 900px;
+  h1,
+  h2,
+  h3 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.6rem, 8vw, 6rem);
     font-weight: 520;
     line-height: 1;
   }
 
-  .about-copy {
-    padding-bottom: 84px;
+  h1 {
+    max-width: 780px;
+    font-size: clamp(3rem, 6vw, 5.55rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.65rem);
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .hero-copy .lede {
+    max-width: 650px;
+    margin: 28px 0 0;
+  }
+
+  .portrait {
+    overflow: hidden;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .story-band {
+    border-block: 1px solid var(--line);
+    background:
+      linear-gradient(90deg, rgba(13, 107, 87, 0.1), transparent 36%),
+      rgba(255, 253, 248, 0.7);
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(32px, 7vw, 92px);
+    padding-block: 78px;
+  }
+
+  .story-intro {
+    position: sticky;
+    top: 102px;
+    align-self: start;
+  }
+
+  .story-copy {
+    color: #34312d;
+    font-size: clamp(1.03rem, 1.8vw, 1.18rem);
+  }
+
+  .story-copy p {
+    margin: 0;
+  }
+
+  .story-copy p + p {
+    margin-top: 1.25em;
+  }
+
+  .focus-section {
+    padding-block: 76px 64px;
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: minmax(160px, 0.45fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: end;
+    margin-bottom: 28px;
+  }
+
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .focus-grid article {
+    min-height: 250px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+
+  .focus-grid span {
+    display: inline-flex;
+    margin-bottom: 54px;
+    color: var(--accent-strong);
+    font-size: 0.8rem;
+    font-weight: 860;
+  }
+
+  .focus-grid p {
+    margin: 16px 0 0;
+    color: var(--muted);
+  }
+
+  .closing-section {
+    padding-block: 20px 92px;
+  }
+
+  blockquote {
+    max-width: 940px;
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.75rem, 4.2vw, 3.4rem);
+    line-height: 1.08;
+  }
+
+  @media (max-width: 900px) {
+    .about-hero,
+    .story-grid,
+    .section-heading,
+    .focus-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-hero {
+      min-height: auto;
+      padding-block: 54px 38px;
+    }
+
+    .story-intro {
+      position: static;
+    }
+
+    .story-grid,
+    .focus-section {
+      padding-block: 54px;
+    }
+
+    .focus-grid article {
+      min-height: auto;
+    }
+
+    .focus-grid span {
+      margin-bottom: 30px;
+    }
   }
 </style>
