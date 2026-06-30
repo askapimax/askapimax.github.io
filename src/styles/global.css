@@ -193,4 +193,8 @@ img {
   .section {
     padding-block: 48px;
   }
+
+  .prose {
+    padding-inline: 16px;
+  }
 }
