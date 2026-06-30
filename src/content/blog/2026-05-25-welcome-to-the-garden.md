@@ -4,7 +4,7 @@ description: "Why this blog starts as a digital garden instead of a finished mag
 pubDate: 2026-05-25
 author: "Max"
 draft: false
-hero: "/images/digital-garden.svg"
+hero: "/images/welcome-to-the-garden.png"
 tags:
   - Start
   - Writing
