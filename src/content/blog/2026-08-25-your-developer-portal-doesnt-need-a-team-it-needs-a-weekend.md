@@ -35,6 +35,12 @@ Becoming a solution engineer at Postman opened my eyes and I am not trying to ad
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
 
+#### **The result: [The JSON JET Developer Portal](https://json-jet.docs.buildwithfern.com/flight-status-api/introduction)**
+
+![]()
+
+**Let me show you how I did that.**
+
 The required steps can be broken down into the following steps:
 
 1. Create a Public Workspace in Postman with [Git integration](https://learning.postman.com/docs/use/native-git/overview)
@@ -43,4 +49,4 @@ The required steps can be broken down into the following steps:
 
    ![Fern Documentation publishing](/uploads/fern_upload.png "Publishing the Collection Documentation to Fern")
 4. Register with Fern (free user to start). Now a Github repo gets created. Take ownership of this repo in the Fern dashboard. 
-5. Inside the repo, you will find an .mdx file (root/fern/docs/pages). Each of these files represent a website on your new developer portal.
+5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represent a website on your new developer portal.
