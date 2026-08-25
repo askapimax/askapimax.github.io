@@ -1,5 +1,5 @@
 ---
-title: Your Developer Portal Doesn't Need a Team, It Needs a Weekend
+title: Your Developer Portal Doesn't Need a Dedicated Team, It Needs a Weekend
 description: "TL;dr: Building an API developer portal does not require a full
   development team anymore. With AI and frameworks like Fern, designing,
   building, testing and deploying a developer portal on top of an existing API
@@ -31,4 +31,6 @@ The second option besides hiring dedicated front-end staff was always spending a
 
 **The second question to answer was if our company was willing to spend $100k+ a year just for a developer portal to save up on 1-2 front-end jobs? Luckily we did not do that.**
 
-Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a
+Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a developer portal through a very intuitive and easy framework. Let me depcit:
+
+![](/uploads/postman_fern_portal_overview.svg)
