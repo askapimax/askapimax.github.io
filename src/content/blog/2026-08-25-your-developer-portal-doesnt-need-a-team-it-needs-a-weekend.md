@@ -23,19 +23,19 @@ As a former API Platform Lead/Product Owner I knew of the importance of an API d
 * It can serve as monitoring tool for your partners to check on their usage and quota
 * It can serve as support dashboard for your customers when contacting you via the platform
 
-Knowing that, I learned the hard way that it is mandatory to acquire dedicated budget and capacity for the implementation of a developer portal. Usually this capacity can only be held in times when the business pressure to build new APIs was not overruling the implementation capacity for the UI. A new API is usually regarded more important to the budget owners than a new shiny website page, to speak in polemic terms. 
+Knowing that, I learned the hard way that it is mandatory to acquire dedicated budget and capacity for the implementation of a developer portal. Usually this capacity can only be held in times when the business pressure to build new APIs was not overruling the implementation capacity for the UI. A new API is usually regarded as more important to the budget owners than a new shiny website page, to speak in polemic terms. 
 
-**But does that mean that a developer portal has to be costly and maintained by a dedicated team? The answer is clearly no, but let me elaborate.**
+#### **But does that mean that a developer portal has to be costly and maintained by a dedicated team? The answer is clearly no, but let me elaborate.**
 
 The second option besides hiring dedicated front-end staff was always spending a lot of money for a dedicated SaaS solution that would serve as central CMS for a developer portal, requiring procurement, onboarding and usually and most importantly, very high license fees plus an additional person to maintain. 
 
-**The second question to answer was if our company was willing to spend $100k+ a year just for a developer portal to save up on 1-2 front-end jobs? Luckily we did not do that.**
+#### **The second question to answer was if our company was willing to spend $100k+ a year just for a developer portal to save up on 1-2 front-end jobs. Luckily we did not do that.**
 
-Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a developer portal through a very intuitive and easy framework. Let me depcit:
+Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a developer portal through a very intuitive and easy framework. Let me depict:
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
 
-#### **The result: [The JSON JET Developer Portal](https://json-jet.docs.buildwithfern.com/flight-status-api/introduction)**
+**The result: [The JSON JET Developer Portal](https://json-jet.docs.buildwithfern.com/flight-status-api/introduction)**
 
 **Let me show you how I did that.**
 
@@ -46,13 +46,13 @@ The required steps can be broken down into the following steps:
 3. Publish your public collection documentation. Now there is a new feature for this in Postman: Publish to Fern
 
    ![Fern Documentation publishing ](/uploads/fern_upload.png "Publishing the Collection Documentation to Fern")
-4. Register with Fern (free user to start). Now a Github repo gets created. Take ownership of this repo in the Fern dashboard. 
-5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represent a website on your new developer portal.
+4. Register with Fern (free user to start). Now a GitHub repo gets created. Take ownership of this repo in the Fern dashboard. 
+5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represents a website on your new developer portal.
 6. Use your favorite AI agent to modify these mdx files
 
 ![](/uploads/mdx_files_to_portal_pages.svg)
 
-This integration took me about 1-2 hours where to longest part was to wait for claude to finish the .mdx files. Lastly I integrated front-end test for the developer portal through Playwright, but this will be the topic of another Post later on.
+This integration took me about 1-2 hours where the longest part was to wait for Claude to finish the .mdx files. Lastly I integrated front-end tests for the developer portal through Playwright, but this will be the topic of another Post later on.
 
 The main problems this solves for me:
 
@@ -60,7 +60,7 @@ The main problems this solves for me:
 * Easy access for the complete team via Git. Everyone who needs to publish content to the developer portal is already familiar with Git
 * super fast deployment of a front-end CICD pipeline with workflows
 * Great visual potential through the usage of .mdx files with CSS and JS included
-* Postman MCP and Github MCP make deployment really easy
+* Postman MCP and GitHub MCP make deployment really easy
 * The source of truth stays within Postman. A change to a spec or collection directly deploys to your developer portal
 * Playwright tests are fully integrated (later blog post) to ensure functionality throughout further deployments
 * One person is enough to maintain a developer portal
