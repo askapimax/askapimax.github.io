@@ -33,4 +33,4 @@ The second option besides hiring dedicated front-end staff was always spending a
 
 Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a developer portal through a very intuitive and easy framework. Let me depcit:
 
-![](/uploads/postman_fern_portal_overview.svg)
+![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
