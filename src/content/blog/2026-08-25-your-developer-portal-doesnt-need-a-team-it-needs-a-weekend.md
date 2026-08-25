@@ -41,6 +41,6 @@ The required steps can be broken down into the following steps:
 2. Update the Collection and Workspace documentation either manually or through the usage of the [Postman Agent Mode](https://www.postman.com/product/agent-mode/)
 3. Publish your public collection documentation. Now there is a new feature for this in Postman: Publish to Fern
 
-   ![](/uploads/fern_upload.png)
+   ![Fern Documentation publishing](/uploads/fern_upload.png "Publishing the Collection Documentation to Fern")
 4. Register with Fern (free user to start). Now a Github repo gets created. Take ownership of this repo in the Fern dashboard. 
 5. Inside the repo, you will find an .mdx file (root/fern/docs/pages). Each of these files represent a website on your new developer portal.
