@@ -60,4 +60,7 @@ The main problems this solves for me:
 
 * Very quick setup of a fully functional developer portal including an API explorer, Blog, Welcome Page and demo page
 * Easy access for the complete team via Git. Everyone who needs to publish content to the developer portal is already familiar with Git
-* Great visual potential through the usage of .mdx files with CSS and JS included.
+* Great visual potential through the usage of .mdx files with CSS and JS included
+* Postman MCP and Github MCP make deployment really easy
+* The source of truth stays within Postman. A change to a spec or collection directly deploys to your developer portal
+* Playwright tests are fully integrated (later blog post) to ensure functionality throughout further deployments
