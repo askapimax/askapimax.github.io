@@ -37,7 +37,7 @@ Becoming a solution engineer at Postman opened my eyes and I am not trying to ad
 
 #### **The result: [The JSON JET Developer Portal](https://json-jet.docs.buildwithfern.com/flight-status-api/introduction)**
 
-![]()
+![](/uploads/jsonjet.png)
 
 **Let me show you how I did that.**
 
@@ -50,3 +50,14 @@ The required steps can be broken down into the following steps:
    ![Fern Documentation publishing](/uploads/fern_upload.png "Publishing the Collection Documentation to Fern")
 4. Register with Fern (free user to start). Now a Github repo gets created. Take ownership of this repo in the Fern dashboard. 
 5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represent a website on your new developer portal.
+6. Use your favorite AI agent to modify these mdx files
+
+![](/uploads/mdx_files_to_portal_pages.svg)
+
+This integration took me about 1-2 hours where to longest part was to wait for claude to finish the .mdx files. Lastly I integrated front-end test for the developer portal through Playwright, but this will be the topic of another Post later on.
+
+The main problems this solves for me:
+
+* Very quick setup of a fully functional developer portal including an API explorer, Blog, Welcome Page and demo page
+* Easy access for the complete team via Git. Everyone who needs to publish content to the developer portal is already familiar with Git
+* Great visual potential through the usage of .mdx files with CSS and JS included.
