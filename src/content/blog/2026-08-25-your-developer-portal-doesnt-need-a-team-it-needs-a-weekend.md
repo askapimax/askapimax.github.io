@@ -7,6 +7,7 @@ description: "TL;dr: Building an API developer portal does not require a full
 pubDate: 2026-08-25
 author: Max
 draft: false
+hero: /uploads/jsonjet.png
 tags:
   - DeveloperPortal
 ---
