@@ -27,6 +27,8 @@ Knowing that, I learned the hard way that it is mandatory to acquire dedicated b
 
 **But does that mean that a developer portal has to be costly and maintained by a dedicated team? The answer is clearly no, but let me elaborate.**
 
-The second option besides hiring dedicated front-end staff was always spending a lot of money for a dedicated SaaS solution that would serve as central CMS for a developer portal, requiring procurement, onboarding and usually and most importantly, very high license fees. 
+The second option besides hiring dedicated front-end staff was always spending a lot of money for a dedicated SaaS solution that would serve as central CMS for a developer portal, requiring procurement, onboarding and usually and most importantly, very high license fees plus an additional person to maintain. 
 
 **The second question to answer was if our company was willing to spend $100k+ a year just for a developer portal to save up on 1-2 front-end jobs? Luckily we did not do that.**
+
+Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a
