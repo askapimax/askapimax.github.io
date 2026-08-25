@@ -34,3 +34,13 @@ The second option besides hiring dedicated front-end staff was always spending a
 Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a developer portal through a very intuitive and easy framework. Let me depcit:
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
+
+The required steps can be broken down into the following steps:
+
+1. Create a Public Workspace in Postman with [Git integration](https://learning.postman.com/docs/use/native-git/overview)
+2. Update the Collection and Workspace documentation either manually or through the usage of the [Postman Agent Mode](https://www.postman.com/product/agent-mode/)
+3. Publish your public collection documentation. Now there is a new feature for this in Postman: Publish to Fern
+
+   ![](/uploads/fern_upload.png)
+4. Register with Fern (free user to start). Now a Github repo gets created. Take ownership of this repo in the Fern dashboard. 
+5. Inside the repo, you will find an .mdx file (root/fern/docs/pages). Each of these files represent a website on your new developer portal.
