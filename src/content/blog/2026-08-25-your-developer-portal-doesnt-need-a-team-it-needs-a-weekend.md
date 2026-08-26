@@ -4,7 +4,7 @@ description: "TL;dr: Building an API developer portal does not require a full
   development team anymore. With AI and frameworks like Fern, designing,
   building, testing and deploying a developer portal on top of an existing API
   requires no more than a day. "
-pubDate: 2026-08-25
+pubDate: 2026-08-26
 author: Max
 draft: false
 hero: /uploads/jsonjet.png
@@ -34,7 +34,7 @@ The second option besides hiring dedicated front-end staff was always spending a
 
 Being an API platform team meant for us supporting the complete API lifecycle from Ideation, design, implementation, testing and maintenance not only internally, but also for external customers. We relied on a tool for all of the mentioned chores already so heavily, that we initially didn't think of it as the third option. Postman was by then already our source of truth for our collaboration, from design to test, to produce APIs and to consume them. Using it as a documentation tool for our API turns out to be the most efficient way to create a great showcase for our APIs without having to modify the tech-stack. This becomes even more true when considering the acquisition of Fern by Postman. Fern sits on top of existing Postman collections and generates Developer Portals with high customization potential, even for non-developers. 
 
-#### Let me guide you through the solution, that I think is the most efficient way to create a developer portal with ease.
+#### Let me guide you through the solution, which I think is the most efficient way to create a developer portal with ease.
 
 At this point I am not trying to advertise licenses. I am in fact trying to elaborate on how you can use technology that is most certainly already present within your company. This is not an add-on of new software, but a more efficient way to use what you already own. Let me depict:
 
@@ -123,7 +123,7 @@ navbar-links:
     href: /checkin-demo
 ```
 
-This integration took me about 1-2 hours where the longest part was to wait for Claude to finish the .mdx files. Lastly I integrated front-end tests for the developer portal through Playwright, but this will be the topic of another post later on.
+The longest part of this integration was to wait for Claude to finish the .mdx files. Lastly I integrated front-end tests for the developer portal through Playwright, but this will be the topic of another post later on.
 
 The main problems this solves for me:
 
