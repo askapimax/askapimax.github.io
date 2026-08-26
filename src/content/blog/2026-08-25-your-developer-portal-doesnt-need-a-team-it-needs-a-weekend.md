@@ -56,6 +56,7 @@ The required steps can be broken down into the following:
 2. Update the Collection and Workspace documentation either manually or through the usage of the [Postman Agent Mode](https://www.postman.com/product/agent-mode/)
 3. Publish your collection documentation. Now there is a new feature for this in Postman: Publish to Fern
 4. Register with Fern (as a free user to start). A GitHub repo gets created. Take ownership of this repo in the Fern dashboard. 
+![](/uploads/fern_git_ownership.png)
 5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represents a website on your new developer portal.
 6. Use your favorite AI agent to modify these mdx files
 
