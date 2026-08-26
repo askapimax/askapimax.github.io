@@ -36,7 +36,7 @@ Being an API platform team meant for us supporting the complete API lifecycle fr
 
 #### Let me guide you through the solution, which I think is the most efficient way to create a developer portal with ease.
 
-At this point I am not trying to advertise licenses. I am in fact trying to elaborate on how you can use technology that is most certainly already present within your company. This is not an add-on of new software, but a more efficient way to use what you already own. Let me depict:
+In the following I am trying to elaborate on how you can use technology that is most certainly already present within your company. This is not an add-on of new software, but a more efficient way to use what you already own. Let me depict:
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
 
