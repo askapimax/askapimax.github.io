@@ -6,7 +6,7 @@ description: "TL;dr: Building an API developer portal does not require a full
   requires no more than a day. "
 pubDate: 2026-08-25
 author: Max
-draft: false
+draft: true
 hero: /uploads/jsonjet.png
 tags:
   - DeveloperPortal
@@ -32,7 +32,11 @@ The second option besides hiring dedicated front-end staff was always spending a
 
 #### **The second question to answer was if our company was willing to spend $100k+ a year just for a developer portal to save on 1-2 front-end jobs. Luckily we did not do that.**
 
-Becoming a solution engineer at Postman opened my eyes and I am not trying to advertise licenses at this point. It really showed me the fundamental ease of publishing a developer portal through a very intuitive and easy framework. Let me depict:
+Being an API platform team meant for us supporting the complete API lifecycle from Ideation, design, implementation, testing and maintenance not only internally, but also for external customers. We relied on a tool for all of the mentioned chores already so heavily, that we initially didn't think of it as the third option. Postman was by then already our source of truth for our collaboration, from design to test, to produce APIs and to consume them. Using it as documentation tool for our API turns out to be the most efficient way to create a great showcase for our APIs without having to modify the tech-stack. This becomes even more true when considering the acquisition of Fern by Postman. Fern sits on top of existing Postman collections and generates Developer Portals with high customization potential, even for non-developers. 
+
+#### Let me guide you through the solution, that I think is the most efficient way to create a developer portal with ease.
+
+At this point I am not trying to advertise licenses. It am in fact trying to elaborate on how you can use technology that is most certainly already present within your company. This is not an add on of new software, but a more efficient way to use what you already own. Let me depict:
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
 
