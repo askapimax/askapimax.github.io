@@ -6,7 +6,7 @@ description: "TL;dr: Building an API developer portal does not require a full
   requires no more than a day. "
 pubDate: 2026-08-25
 author: Max
-draft: true
+draft: false
 hero: /uploads/jsonjet.png
 tags:
   - DeveloperPortal
@@ -48,7 +48,7 @@ For the sake of this article, I imagined an artificial Airline called JSON Jet A
 
 **But in detail, how did I do that?**
 
-![](/uploads/fern_upload.png)
+![Screenshot of the Postman Feature to publish a Fern documentation](/uploads/fern_upload.png "Publishing a Fern documentation from Postman")
 
 The required steps can be broken down into the following:
 
@@ -59,9 +59,69 @@ The required steps can be broken down into the following:
 5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represents a website on your new developer portal.
 6. Use your favorite AI agent to modify these mdx files
 
-![](/uploads/fern_git_ownership.png)
+Here is an example of a .mdx file which is a mixture of markdown, javascript and css
 
-![](/uploads/mdx_files_to_portal_pages.svg)
+```jsx
+---
+title: My Post
+description: A short demo of MDX
+---
+
+import { useState } from "react"
+
+# Regular markdown works here
+
+You can write **normal markdown** and drop in live JSX whenever you need it.
+
+export function Counter() {
+  const [count, setCount] = useState(0)
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Clicked {count} times
+    </button>
+  )
+}
+
+<Counter />
+```
+
+![Screenshot of Fern on taking the Git ownership](/uploads/fern_git_ownership.png "Taking the Git ownership of the created Fern repository")
+
+![Diagram depicting the relation of individual websites on the developer portal and the underlying .mdx files](/uploads/mdx_files_to_portal_pages.svg "Diagram depicting the relation of individual websites on the developer portal and the underlying .mdx files")
+
+The image above shows the relation between the individual .mdx files that either you or your favorite LLM creates for you and the resulting websites. Placing them into the repository and connecting them through a nav bar is all that there is to it. 
+
+```yaml
+navigation:
+  - api: Flight Status API
+    flattened: false
+    layout:
+      # hidden: reachable by direct URL and via the in-page nav bar, but kept
+      # out of the API reference sidebar so it lists only the API itself.
+      - page: Introduction
+        path: docs/pages/introduction.mdx
+        hidden: true
+      - page: CheckIn Demo
+        path: docs/pages/checkindemo.mdx
+        hidden: true
+      - page: Blog
+        path: docs/pages/blog.mdx
+        hidden: true
+
+navbar-links:
+  - type: minimal
+    text: Home
+    href: /flight-status-api/introduction
+  - type: minimal
+    text: API Explorer
+    href: /flight-status-api/flight-status/get-flight-status
+  - type: minimal
+    text: Blog
+    href: /blog
+  - type: filled
+    text: CheckIn Demo
+    href: /checkin-demo
+```
 
 This integration took me about 1-2 hours where the longest part was to wait for Claude to finish the .mdx files. Lastly I integrated front-end tests for the developer portal through Playwright, but this will be the topic of another post later on.
 
@@ -75,3 +135,7 @@ The main problems this solves for me:
 * The source of truth stays within Postman. A change to a spec or collection directly deploys to your developer portal
 * Playwright tests are fully integrated (later blog post) to ensure functionality throughout further deployments
 * One person is enough to maintain a developer portal
+
+
+
+I hope this lands on you at a point where I wished someone gave it to me. It is a very elegant and efficient way to show your work to your internal colleagues and outside world without requiring a massive overhead.
