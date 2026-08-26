@@ -40,9 +40,13 @@ At this point I am not trying to advertise licenses. It am in fact trying to ela
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
 
+The above diagram shows the high-level architecture of how your existing tech-stack can be used to deploy a fully functional developer portal without the need to either hire new staff or invest in an expensive SaaS solution. Postman most likely already sits on top of your existing Git-backed API project. Fern then takes the existing collections and specs, adds in .mdx files for visuals and publishes this on a web-server that you can take over into your domain.
+
+For the sake of this article, I imagined an artificial Airline called JSON Jet Airways. I instructed Claude to give it's best at the visuals for the website and this is what dropped out in a matter of an hour:
+
 **The result: [The JSON JET Developer Portal](https://json-jet.docs.buildwithfern.com/flight-status-api/introduction)**
 
-**Let me show you how I did that.**
+**But in detail, how did I do that?**
 
 ![](/uploads/fern_upload.png)
 
@@ -50,10 +54,12 @@ The required steps can be broken down into the following:
 
 1. Create a Public Workspace in Postman with [Git integration](https://learning.postman.com/docs/use/native-git/overview)
 2. Update the Collection and Workspace documentation either manually or through the usage of the [Postman Agent Mode](https://www.postman.com/product/agent-mode/)
-3. Publish your public collection documentation. Now there is a new feature for this in Postman: Publish to Fern
-4. Register with Fern (as a free user to start). Now a GitHub repo gets created. Take ownership of this repo in the Fern dashboard. 
+3. Publish your collection documentation. Now there is a new feature for this in Postman: Publish to Fern
+4. Register with Fern (as a free user to start). A GitHub repo gets created. Take ownership of this repo in the Fern dashboard. 
 5. Inside the repo you will find an .mdx file (root/fern/docs/pages). Each of these files represents a website on your new developer portal.
 6. Use your favorite AI agent to modify these mdx files
+
+
 
 ![](/uploads/mdx_files_to_portal_pages.svg)
 
