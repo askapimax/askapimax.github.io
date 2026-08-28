@@ -72,6 +72,10 @@ The real sweet spot I am aiming for is API testing. API testing covers a large p
 | **E2E & UI Testing**            | Yes (Hybrid Setup)                   | A clever "exotic" approach: Keep your Playwright UI scripts inside your Git repo and trigger them via the Postman API within your CI/CD workflow to bridge backend and frontend validation seamlessly. |
 | **Accessibility & Usability**   | Partial (10% Manual Focus)           | Basic accessibility linters run inside Playwright scripts, but real human screen-reader walkthroughs and UX checks belong to the 10% manual effort.                                                    |
 
+
+
+\------ Hier gehts dann weiter. 
+
 intro /historical context
 
 * More technical. User end2end flow from ui to backend is needed and involves rigorous testing setup . Everything that is automated scales well but has to be maintained.
