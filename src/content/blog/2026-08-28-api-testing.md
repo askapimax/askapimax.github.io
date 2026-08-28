@@ -33,15 +33,22 @@ Software tests generally can be viewed form two distinct angles:
 
 Lets first look at the tests from the testing level perspective:
 
-| Testing Type  | Description | Automation Potential |
-|---|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| **Testing Type**        | **Description**                                                                                                | **Automation** **Potential**                                                                                                                                                                                    |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unit Testing            | Tests a single function or class in isolation                                                                  | Fully automated per se. Can run as part of a CI/CD                                                                                                                                                              |
+| Integration Testing     | Tests the integration of two or more components                                                                | Full automation potential. Can run as part of a CI/CD                                                                                                                                                           |
+| Contract Testing        | Whether a service adheres to the specified request / response schema                                           | Full automation potential. Can run as part of a CI/CD                                                                                                                                                           |
+| E2E Testing             | Tests the full application end to end, often from the ui to the backend, also often including all dependencied | Mixed but possible. UI tests can be automated through frameworks like Playwright but can be flaky and slower sometimes. But once successfully automated, this is the holy grail of testing and scales very well |
+| Smoke Testing           | Tests a handful of critical testing paths to ensure "the core business flows did not break".                   | Full automation potential. Can run as part of a CI/CD                                                                                                                                                           |
+| Sanity Testing          | A very narrow, very quick change on a specific area to ensure functionality                                    | Full automation potential. Can run as part of a CI/CD, but often a quick manual test as automation often isn't worth the time investment                                                                        |
+| Regression Testing      | Checks the business functionality of an application after a change                                             | Ideally fully automated and high potential but higher maintenance effort. Can and should run as part of a CI/CD. Should cover also non critical business paths.                                                 |
+| User Acceptance Testing | Tests the expected user behavior of a system.                                                                  | Per definition a manual test that real users sign off, which is the point of this test                                                                                                                          |
+
+
+
+
+
+
 
 * intro /historical context
 * More technical. User end2end flow from ui to backend is needed and involves rigorous testing setup . Everything that is automated scales well but has to be maintained.
