@@ -4,6 +4,7 @@ description: "TL;dr: "
 pubDate: 2026-08-28
 author: Max
 draft: true
+hero: /uploads/chatgpt-image-aug-28-2026-02_39_36-pm.png
 tags:
   - Note
 ---
