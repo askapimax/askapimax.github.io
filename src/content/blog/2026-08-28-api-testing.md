@@ -28,12 +28,20 @@ After setting the historical scene and putting you in my imaginary shoes, I want
 
 Software tests generally can be viewed form two distinct angles:
 
-1. Software testing by quality attribute (what metric are we testing on)
-2. Software testing by testing level (what and how are we testing)
+1. Software testing by testing level (what and how are we testing)
+2. Software testing by quality attribute (what metric are we testing on)
 
+Lets first look at the tests from the testing level perspective:
 
-
-
+| Testing Type  | Description | Automation Potential |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
 
 * intro /historical context
 * More technical. User end2end flow from ui to backend is needed and involves rigorous testing setup . Everything that is automated scales well but has to be maintained.
