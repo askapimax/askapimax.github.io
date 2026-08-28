@@ -12,13 +12,30 @@ In the beginning, there was milk and honey, so they say...
 
 In a previous life, I was lucky enough to be part of the development of a completely new eCommerce platform. Money was plentiful and the goal on the horizon was to supply the core business with a distribution channel for their products. The sky was the limit. 
 
-The times were so plentiful, that every single previous decision was taken into question. UIs not modern enough or accesible were redesigned, working legacy APIs were torn down and rebuilt, established process definitions were re-invented and the decision was soon made to rebuild the whole rocketship we were aiming at the moon. 
+The times were so plentiful, that every single previous decision was taken into question. UIs not modern enough or accessible were redesigned, working legacy APIs were torn down and rebuilt, established process definitions were re-invented and the decision was soon made to rebuild the whole rocketship we were aiming at the moon. Of course people were needed to compensate for the rising need for innovation and so they came. 
 
-Of course people were needed to compensate for the rising need for innovation and so they came. 
+The project started very strong, everyone had the highest hopes and put immense energy into their artifacts. User stories were written, developers playfully fought for the right to take on the most innovative user stories and timelines were held. This is exactly what turned out to be the problem, which was not the ambition of our developers, it was the pure scale in which features left the production chain without thoughtful automatic testing. Manual testers tried to keep up with the amount of testing artifacts and we soon threw test automation engineering capacity on the project but without a strategic battle plan, the endeavor was foreseeably short.
 
-* Introduction/History
-* Reality Check - what is really needed is Testing. Green fields often end in fast delivery push instead of rigorous testing. This is exactly the moment where the excitement overrules the thoughtfulness and strategic setup that an IT should accompany.
-* Core business had hard requirements ->  Need for solid testing frameworks. Often overlooked by business who want to see results. Business needs to take this seriously, otherwise this doesnt scale and bites you later on. 
+The reality check came pretty soon and this is the lesson that everyone of us heard before but was naive enough to think that it would not hit us:
+
+**Software testing is no commodity. A software testing strategy and automatic testing is the absolute foundation of any scaling modern software platform. Software testing and rigorous planning must and can not be omitted. Period.** 
+
+Automatic software testing does not produce tangible business results. In fact the absence of a testing strategy and automation project leads to very tangible negative results. It is in the nature of every human being to avoid fears and work towards positive rewards. Even more so the need for every project manager , CTO or product manager should be very clear to invest in a testing framework should be clear. If the business objectives can't be held because the software quality is not on par with the business demand, no revenue can be generated and technical debt increases, which is directly related to financial debt and thus, to a reduction in revenue. 
+
+Ad-hoc testing may work for a single scrum team with a limited project scope but in an agile context, where the majority of people produce interconnected software components, things that worked manually before, just don't scale up. 
+
+After setting the historical scene and putting you in my imaginary shoes, I want to show you my understanding of software testing for scaling platforms and show you some shortcuts I think are reasonable to take, which focus on the aspect of API testing for logical business verification. 
+
+Software tests generally can be viewed form two distinct angles:
+
+1. Software testing by quality attribute (what metric are we testing on)
+2. Software testing by testing level (what and how are we testing)
+
+
+
+
+
+* intro /historical context
 * More technical. User end2end flow from ui to backend is needed and involves rigorous testing setup . Everything that is automated scales well but has to be maintained.
 * Overview of general testing setup. Two angles. By Quality attribute (what is tested) and by testing level (where does it happen). In the end, API testing performs the core business tests for a working ecommerce platform. UI tests can be integrated and automated, maybe even through Postman, but that secures the business and NFR requirements of a eCom platform. Manual tests remain later. 
 * API testing acts as the sweet spot for business logic verification
