@@ -1,48 +1,39 @@
 ---
 title: Your Developer Portal Doesn't Need a Sprint, It Needs a Day
-description: "TL;dr: Building an API developer portal does not require a full
-  sprint anymore. With AI and free frameworks like Fern, designing, building,
-  testing and deploying a developer portal on top of an existing API requires no
-  more than a day. "
-pubDate: 2026-08-26
+description: "TL;dr: Learn how to build a developer portal with Postman and Fern
+  using Git-backed Collections and MDX. Ship docs in a day without SaaS fees or
+  front-end work."
+pubDate: 2026-10-12
 author: Max
 draft: false
 hero: /uploads/jsonjet.png
 tags:
   - Developer Portal
 ---
-As a former [API Platform Lead & Product Owner](https://www.linkedin.com/in/m-friedrich/) I knew of the importance of an API developer portal. It is not only a showcase for your APIs, it actually serves various independent purposes:
+As a former [API Platform Lead & Product Owner](https://www.linkedin.com/in/m-friedrich/) I know how important an API developer portal is. It is more than a showcase for your APIs. A good portal pulls weight across the whole organization:
 
-* it documents your API, making the API (hopefully) easier to discover and integrate for other developers. This can be supported with SDKs and code examples
-* it can serve as a notification center for changes to your APIs, like new versions, breaking changes or new functionality
-* often overlooked by business departments: A developer portal serves as advertisement for technical B2B partners of your company. Developers can clearly tell if an API program is of high priority for a company just by looking at it
-* it accelerates your internal and external onboarding, especially when integrating [contact forms](https://developer.db.com/contact), self-services for API keys or onboarding processes
-* it serves as a single source of knowledge for your team's developers and business analysts to collect their gained business and technical knowledge. This becomes especially important with higher internal team turnover
-* it connects non-technical stakeholders to the development process and serves as showcase. A developer portal is a great way to make API products tangible for all sorts of stakeholders
-* it showcases your APIs to budget owners and justifies expenses. Depending on the technical expertise of high level stakeholders, a developer portal can sometimes be the only way to experience API products without having to understand code
-* it can serve as an internal testing tool for internal manual testers or business analysts
-* it could be a monitoring tool for your partners to check on their usage and quota
-* it can serve as a support dashboard for your customers when contacting you via the platform
+* It documents your API and makes it easier for other developers to discover and integrate, especially when you back it with SDKs and code examples.
+* It accelerates internal and external onboarding, with contact forms, self-service for API keys, and guided onboarding flows.
+* It acts as a notification center for API changes, from new versions to breaking changes.
+* It serves as a single source of knowledge for developers and business analysts, which matters more as internal turnover increases.
+* It makes your API products tangible for non-technical stakeholders and budget owners, who often have no other way to experience what the team is building.
+* It advertises your company to technical B2B partners. Developers can tell at a glance whether an API program is a priority just by looking at the portal.
 
-Knowing that, I learned the hard way that it is mandatory to allocate dedicated budget and capacity for the implementation of a developer portal. Usually this capacity can only be held in times when the business pressure to build new APIs was not overruling the delivery for the UI. A new API is usually regarded as more important to the budget owners than a new shiny website page, to put it bluntly. 
+Knowing all of that, I learned the hard way that you have to allocate dedicated budget and capacity to build a developer portal. Usually, that capacity is only available during periods when the pressure to ship new APIs is not overruling delivery on the UI. A new API is almost always seen as more important to budget owners than a new website page, to put it bluntly. So the portal and the APIs end up competing for the same team capacity.
 
 #### **But does that mean a developer portal has to be costly and maintained by a dedicated team? The answer is clearly no, but let me elaborate.**
 
-The second option besides hiring dedicated front-end staff was always spending a lot of money for a dedicated SaaS solution. This would serve as central CMS for a developer portal, requiring procurement, onboarding and usually most importantly, very high license fees plus an additional person to maintain. 
+It does not have to be that way. Besides pulling your own people into front-end work, the other option has always been a dedicated SaaS solution. It serves as a central CMS for a developer portal, but it requires procurement, onboarding, and very high license fees. Someone still has to maintain it on top of that. Spending 100k per year on a developer portal and keeping people busy maintaining it instead of building APIs never sat right with me. Luckily, we did not do that.
 
-#### **The second question was if a company would spend 100k per year just for a developer portal to save 1-2 front-end jobs. Luckily we did not do that.**
+Being an API platform team meant supporting the complete API lifecycle, from ideation and design to implementation, testing, and maintenance, both internally and for external customers. We already relied on one tool for all of these chores so heavily that we did not initially think of it as the third option. [Postman](https://www.postman.com/) was by then already our source of truth for our collaboration, from design to test, to produce APIs and consuming them. Using it as a documentation tool for our API turns out to be the most efficient way to create a great showcase for our APIs without having to heavily modify your tech-stack. This is even more true since Postman acquired [Fern](https://buildwithfern.com/). Fern sits on top of existing Postman collections and generates Developer Portals with high customization potential, even for non-developers. (Full disclosure: I work at Postman.)
 
-Being an API platform team meant supporting the complete API lifecycle from ideation, design, implementation, testing and maintenance not only internally, but also for external customers. We relied on a tool for all of the mentioned chores already so heavily, that we initially didn't think of it as the third option. [Postman](https://www.postman.com/) was by then already our source of truth for our collaboration, from design to test, to produce APIs and consuming them. Using it as a documentation tool for our API turns out to be the most efficient way to create a great showcase for our APIs without having to heavily modify your tech-stack. This becomes even more true after considering the acquisition of [Fern](https://buildwithfern.com/) by [Postman](https://www.postman.com/). Fern sits on top of existing Postman collections and generates Developer Portals with high customization potential, even for non-developers. 
-
-#### Let me guide you through the solution, which I think is the most efficient way to create and buy a developer portal.
-
-In the following I am showing you how you can use technology that is most certainly already present within your company. This is not an add-on of new software, but a more efficient way to use what you already own, together with Fern. 
+#### Let me walk you through what I think is the most efficient way to build a developer portal, using technology that is most likely already present in your company. It adds no new software. You simply use what you already own more efficiently, together with Fern.
 
 ![Overview of the high level process on deploying a developer portal through Postman and Fern](/uploads/postman_fern_portal_overview.svg "Overview of the high level process on deploying a developer portal through Postman and Fern")
 
-The diagram above shows the high-level architecture of how your existing tech-stack can be used to deploy a fully functional developer portal without the need to hire new staff or invest in an expensive SaaS solution. Postman most likely already sits on top of your existing [Git-backed API project](https://learning.postman.com/docs/use/native-git/overview). Fern then takes the existing collections and specs, adds in .mdx files for visuals and publishes this on a url you can change to your domain. 
+The diagram above shows the high-level architecture of how your existing tech stack can deploy a fully functional developer portal. Your API team stays on the APIs, and you do not need an expensive SaaS solution. Postman most likely already sits on top of your existing [Git-backed API project](https://learning.postman.com/docs/use/native-git/overview). Fern then takes the existing Collections and specs, adds .mdx files for visuals, and publishes everything on a URL you can map to your own domain. 
 
-I imagined an artificial Airline called JSON Jet Airways. I instructed Claude to give its best at the visuals for the website and this is what dropped out in about an hour:
+I imagined a fictional airline called JSON Jet Airways. I asked Claude to do its best on the visuals for the website, and this is what came out in about an hour:
 
 **[The JSON JET Developer Portal](https://json-jet.docs.buildwithfern.com/flight-status-api/introduction)**
 
@@ -50,7 +41,7 @@ I imagined an artificial Airline called JSON Jet Airways. I instructed Claude to
 
 ![Screenshot of the Postman Feature to publish a Fern documentation](/uploads/fern_upload.png "Publishing a Fern documentation from Postman")
 
-This is how I got there:
+Here is the path I took:
 
 1. Create a Public Workspace in Postman with the [Git integration](https://learning.postman.com/docs/use/native-git/overview)
 2. Update the Collection and Workspace documentation either manually or through the usage of [Postman Agent Mode](https://www.postman.com/product/agent-mode/)
@@ -89,7 +80,7 @@ export function Counter() {
 
 ![Diagram depicting the relation of individual websites on the developer portal and the underlying .mdx files](/uploads/mdx_files_to_portal_pages.svg "Diagram depicting the relation of individual websites on the developer portal and the underlying .mdx files")
 
-The image above shows the relation between the individual .mdx files that either you or your favorite LLM creates for you and the resulting websites. Placing them into the repository and connecting them through a nav bar is all that there is to it. 
+The image above shows how the individual .mdx files, created by you or your favorite LLM, map to the resulting pages. Place them in the repository and connect them through a nav bar. That is all there is to it.
 
 ```yaml
 navigation:
@@ -123,14 +114,34 @@ navbar-links:
     href: /checkin-demo
 ```
 
-The longest part of this integration was to wait for Claude to finish the .mdx files. Lastly I integrated front-end tests for the developer portal through Playwright, but this will be the topic of another post later on.
+The longest part of this integration was waiting for Claude to finish the .mdx files. I also added front-end tests for the developer portal through Playwright, but that is a topic for another post.
 
 The main problems this solves for me:
 
-* Easy access for the complete team via Git and Postman workspaces. Everyone who needs to publish content to the developer portal is already familiar with Git
-* One person is enough to maintain a developer portal
-* No need for dedicated tech-staff and no burden of a $100k+ SaaS solution
-* A fully functioning developer portal just within one day
-* Git-based workflow makes it straightforward to add CI/CD, branching and automated tests later
+* Easy access for the whole team through Git and Postman Workspaces. Everyone who needs to publish content to the developer portal is already familiar with Git.
+* The portal needs no dedicated owner to maintain it, so your API team can stay on the APIs.
+* Let your favorite LLM do the automatic updating, documentation and sync tasks through the Fern MCP server
+* No dedicated front-end work, and no $100k+ SaaS budget competing with your API roadmap.
+* A fully functioning developer portal within one day.
+* A Git-based workflow makes it straightforward to add CI/CD, branching, and automated tests later. Portal updates can live in the same workflow as your API changes, so the docs do not lag behind.
 
-I hope this lands on you at a point where I wished someone gave it to me. It is a very elegant and efficient way to show your work to your internal colleagues and outside world without requiring a massive overhead.
+### One portal, two audiences: humans and AI agents
+
+There is one more reason this setup held up over time. Developer portals are no longer read only by humans. Coding agents, RAG pipelines, and in-IDE assistants hit docs sites constantly, and most portals were not designed for that traffic. Fern was. The same site you just built for your team is already set up to serve AI agents well, without extra work from you.
+
+A few things Fern does out of the box:
+
+* Machine-readable entry points. Every site gets /llms.txt and /llms-full.txt at the root, generated automatically alongside robots.txt and sitemap.xml. llms.txt is a compact index; llms-full.txt embeds the full content. Appending /llms.txt to any page URL gives a page-level index.
+* Markdown for every page. Append .md to any page URL and you get clean Markdown back. No scraping HTML, no stripping nav chrome.
+* Bot detection that serves Markdown instead of HTML. When Fern detects an LLM bot, it serves Markdown directly. Fern reports this cuts token use by 90% or more, which matters when agents are paying per token to read your docs.
+* Content tags for agent-specific output. <llms-only> shows content only to AI tools, <llms-ignore> hides content from them, and query parameters can filter output further (for example, by SDK language).
+* Ask Fern, a RAG chat with citations. It runs in your docs, in Slack, and through an API you can embed in your own product.
+* A hosted MCP server per docs site. Any site with Ask Fern enabled gets an MCP server at /_mcp/server. Claude Code, Cursor, and Windsurf can connect to it with one click. For authenticated sites, Fern recommends turning it off with mcp: false.
+* Access for protected docs. Agents can get a JWT using a Fern API key, so they can read gated content and use search without blowing past your auth.
+* Crawl and training control. Your own robots.txt still decides whether third-party tools can crawl or train on the content.
+
+For teams building internal tools, you can also install a private MCP server scoped to your org (fern mcp install) that gives coding agents context on docs.yml, components, and CLI commands. And Fern Agent can edit docs, open PRs, and run on a schedule or from a Slack flow.
+
+The short version: the same .mdx files powering your portal for humans are also the surface your API gets discovered through by every coding agent your partners and customers are using. You get both audiences from one build.
+
+I wish someone had shown me this approach years ago. I hope it reaches you sooner. It is an efficient way to show your work to internal colleagues and the outside world without pulling your team away from what they are there to build: the APIs.
